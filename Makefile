@@ -1,2 +1,2 @@
-main:main.cpp
-g++ main.cpp -Wall -o main
+geometry:geometry.cpp
+  g++ geometry.cpp -Wall -o geometry  
