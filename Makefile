@@ -1,2 +1,2 @@
 geometry:geometry.cpp
-  g++ geometry.cpp -Wall -o geometry  
+	g++ geometry.cpp -Wall -o geometry  
