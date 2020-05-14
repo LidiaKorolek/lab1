@@ -2,13 +2,10 @@
 #include <math.h>
 #include "PerimeterCircle.h"
 #include "AreaCircle.h"
+#include "AreaTriangle.h"
+#include "PerimeterTriangle.h"
 
 using namespace std;
-
-double AreaTriangle(double x, double y, double x1, double y1, double x2, double y2) {
-    double S = abs((x1 - x) * (y2 - y) - (x2 - x) * (y1 - y));
-    return S;
-}
 
 int main() {
     cout << "Choose two figures: 1.Circle 2.Triangle" << endl;
