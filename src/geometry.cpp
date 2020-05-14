@@ -1,17 +1,13 @@
 #include <iostream>
 #include <math.h>
+#include "PerimeterCircle.h"
 
 #define Pi 3.14
 
 using namespace std;
 
-double PerimeterCircle(double r) {
-    float perimeter = 2 * Pi * r;
-    return perimeter;
-}
-
 double AreaCircle(double r) {
-    float area = Pi * r * r;
+    double area = Pi * r * r;
     return area;
 }
 

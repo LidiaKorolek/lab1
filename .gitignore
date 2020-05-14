@@ -35,5 +35,11 @@
 main
 makefile~
 main.cpp~
+<<<<<<< HEAD
 -miltiInst
-CMakeLists.txt
+||||||| cd2e643
+-miltiInst
+=======
+-miltiInst
+.idea/
+>>>>>>> refs/remotes/origin/PerimeterCircle
