@@ -1,15 +1,9 @@
 #include <iostream>
 #include <math.h>
 #include "PerimeterCircle.h"
-
-#define Pi 3.14
+#include "AreaCircle.h"
 
 using namespace std;
-
-double AreaCircle(double r) {
-    double area = Pi * r * r;
-    return area;
-}
 
 double PerimeterTriangle(double x, double y, double x1, double y1, double x2, double y2) {
     double perimeter = sqrt(pow(x1 - x, 2) + pow(y1 - y, 2));
