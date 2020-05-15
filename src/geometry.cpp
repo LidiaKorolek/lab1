@@ -1,13 +1,14 @@
-#include <iostream>
-#include <math.h>
-#include "PerimeterCircle.h"
 #include "AreaCircle.h"
 #include "AreaTriangle.h"
+#include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+#include <iostream>
+#include <math.h>
 
 using namespace std;
 
-int main() {
+int main()
+{
     cout << "Choose two figures: 1.Circle 2.Triangle" << endl;
     int f, f1;
     cin >> f >> f1;
@@ -36,12 +37,16 @@ int main() {
         cin >> cir2.r;
 
         cout << "\t\t1. ";
-        cout << "Circle(" << cir1.x << " " << cir1.y << ", " << cir1.r << ")" << endl;
-        cout << "Area: " << AreaCircle(cir1.r) << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
+        cout << "Circle(" << cir1.x << " " << cir1.y << ", " << cir1.r << ")"
+             << endl;
+        cout << "Area: " << AreaCircle(cir1.r)
+             << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
 
         cout << "\t\t2. ";
-        cout << "Circle(" << cir2.x << " " << cir2.y << ", " << cir2.r << ")" << endl;
-        cout << "Area: " << AreaCircle(cir2.r) << "\nPerimeter: " << PerimeterCircle(cir2.r) << endl;
+        cout << "Circle(" << cir2.x << " " << cir2.y << ", " << cir2.r << ")"
+             << endl;
+        cout << "Area: " << AreaCircle(cir2.r)
+             << "\nPerimeter: " << PerimeterCircle(cir2.r) << endl;
     }
 
     if (f == 2 and f1 == 2) {
@@ -65,16 +70,20 @@ int main() {
              << tri1.y1 << ", " << tri1.x2 << " " << tri1.y2 << ")" << endl;
         cout << "Area: "
              << AreaTriangle(tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
-             << "\nPerimeter: " << PerimeterTriangle(tri1.x,
-                                                     tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2) << endl;
+             << "\nPerimeter: "
+             << PerimeterTriangle(
+                        tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
+             << endl;
 
         cout << "\t\t2. ";
         cout << "Triangle(" << tri2.x << " " << tri2.y << ", " << tri2.x1 << " "
              << tri2.y1 << ", " << tri2.x2 << " " << tri2.y2 << ")" << endl;
         cout << "Area: "
              << AreaTriangle(tri2.x, tri2.y, tri2.x1, tri2.y1, tri2.x2, tri2.y2)
-             << "\nPerimeter: " << PerimeterTriangle(tri2.x,
-                                                     tri2.y, tri2.x1, tri2.y1, tri2.x2, tri2.y2) << endl;
+             << "\nPerimeter: "
+             << PerimeterTriangle(
+                        tri2.x, tri2.y, tri2.x1, tri2.y1, tri2.x2, tri2.y2)
+             << endl;
         return 0;
     }
 
@@ -93,16 +102,17 @@ int main() {
 
         cout << "\t\t1. Circle(" << cir1.x << " " << cir1.y << ", " << cir1.r
              << ")" << endl;
-        cout << "Area: " << AreaCircle(cir1.r) << "\nPerimeter: "
-             << PerimeterCircle(cir1.r) << endl;
+        cout << "Area: " << AreaCircle(cir1.r)
+             << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
 
-        cout << "\t\t2. Triangle(" << tri1.x << " " << tri1.y << ", "
-             << tri1.x1 << " " << tri1.y1 << ", " << tri1.x2 << " " << tri1.y2
-             << ")" << endl;
+        cout << "\t\t2. Triangle(" << tri1.x << " " << tri1.y << ", " << tri1.x1
+             << " " << tri1.y1 << ", " << tri1.x2 << " " << tri1.y2 << ")"
+             << endl;
         cout << "Area: "
              << AreaTriangle(tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
-             << "\nPerimeter: " << PerimeterTriangle(tri1.x,
-                                                     tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2) << endl;
+             << "\nPerimeter: "
+             << PerimeterTriangle(
+                        tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
+             << endl;
     }
-
 }
