@@ -47,8 +47,6 @@ int main()
              << endl;
         cout << "Area: " << AreaCircle(cir2.r)
              << "\nPerimeter: " << PerimeterCircle(cir2.r) << endl;
-        cin.get();
-        return 0;
     }
 
     if (f == 2 and f1 == 2) {
@@ -86,8 +84,6 @@ int main()
              << PerimeterTriangle(
                         tri2.x, tri2.y, tri2.x1, tri2.y1, tri2.x2, tri2.y2)
              << endl;
-        cin.get();
-        return 0;
     }
 
     if ((f == 1 and f1 == 2) or (f == 2 and f1 == 1)) {
@@ -117,7 +113,7 @@ int main()
              << PerimeterTriangle(
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
-        cin.get();
-        return 0;
     }
+    cin.get();
+    return 0;
 }
