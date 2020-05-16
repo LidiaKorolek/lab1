@@ -23,6 +23,8 @@ int main()
 
     if (f1 <= 0 || f <= 0 || f1 > 2 || f > 2) {
         cout << "Error input data" << endl;
+        cin.get();
+        cin.get();
         return 0;
     }
 
@@ -114,6 +116,7 @@ int main()
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
     }
+    cin.get();
     cin.get();
     return 0;
 }
