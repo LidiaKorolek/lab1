@@ -1,1 +1,5 @@
 #include "catch.hpp"
+#include "AreaCircle.h"
+#include "AreaTriangle.h"
+#include "PerimeterCircle.h"
+#include "PerimeterTriangle.h"
