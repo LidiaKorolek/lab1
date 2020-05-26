@@ -24,7 +24,7 @@ build/src/AreaTriangle.o : src/AreaTriangle.cpp
 	g++ -Wall -Werror -c --std=c++17 src/AreaTriangle.cpp -o build/src/AreaTriangle.o
 	
 build/test/test.o : test/test.cpp
-	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 -c test/test.cpp -o build/test/test.o
+	g++ -Wall -Werror -c -std=c++17 -I thirdparty/catch2 test/test.cpp -o build/test/test.o
 	
 clean: 
 	rm -rf build/*.o bin/*.exe
