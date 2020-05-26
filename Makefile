@@ -1,6 +1,6 @@
 .PHONY: clean all
 
-all: bin/program
+all: bin/program bin/test
 
 bin/program: build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o
 	g++ -Wall -Werror --std=c++17 build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o -o bin/program
@@ -23,8 +23,8 @@ build/src/AreaCircle.o : src/AreaCircle.cpp
 build/src/AreaTriangle.o : src/AreaTriangle.cpp
 	g++ -Wall -Werror -c --std=c++17 src/AreaTriangle.cpp -o build/src/AreaTriangle.o
 	
-build/test/geometry.o : test/geometry.cpp
-	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 -с test/test.cpp -o build/test/geometry.o
+build/test/test.o : test/test.cpp
+	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 -с test/test.cpp -o build/test/test.o
 	
 clean: 
 	rm -rf build/*.o bin/*.exe
