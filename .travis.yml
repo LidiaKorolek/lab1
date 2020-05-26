@@ -3,7 +3,4 @@ language: C++
 dist: xenial
 
 script:
-  - make
-  - .bin/test
-  - git ls-files src/ | xargs clang-format -i && git diff --exit-code
-  - git ls-files test/ | xargs clang-format -i && git diff --exit-code
+   - git ls-files src/ | xargs clang-format -i && git diff --exit-code && make all && make  bin/test && bin/test
