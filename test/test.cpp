@@ -2,6 +2,8 @@
 #include "AreaTriangle.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+
+#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 
 TEST_CASE("Circle area", "[AreaCircle]")
