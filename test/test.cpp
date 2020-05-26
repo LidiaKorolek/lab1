@@ -10,7 +10,7 @@ TEST_CASE("Circle area", "[AreaCircle]")
 {
     REQUIRE(AreaCircle(1) == 3.14);
     REQUIRE(AreaCircle(2.5) == 19.625);
-    REQUIRE(AreaCircle(5) == 15.7);
+    REQUIRE(AreaCircle(5) == 78.5);
     REQUIRE(AreaCircle(10) == 31.4);
 }
 
