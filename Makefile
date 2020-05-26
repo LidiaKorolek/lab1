@@ -5,6 +5,9 @@ all: bin/program
 bin/program: build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o
 	g++ -Wall -Werror --std=c++17 build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o -o bin/program
 	
+bin/test: build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o
+	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 -с build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o -o bin/test
+	
 build/src/geometry.o : src/geometry.cpp
 	g++ -Wall -Werror -c --std=c++17 src/geometry.cpp -o build/src/geometry.o
 
@@ -19,6 +22,9 @@ build/src/AreaCircle.o : src/AreaCircle.cpp
 	
 build/src/AreaTriangle.o : src/AreaTriangle.cpp
 	g++ -Wall -Werror -c --std=c++17 src/AreaTriangle.cpp -o build/src/AreaTriangle.o
+	
+build/test/geometry.o : test/geometry.cpp
+	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 -с test/test.cpp -o build/test/geometry.o
 	
 clean: 
 	rm -rf build/*.o bin/*.exe
