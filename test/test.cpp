@@ -25,7 +25,7 @@ TEST_CASE("Triangle area", "[AreaTriangle]")
 TEST_CASE("Circle perimeter", "[PerimeterCircle]")
 {
     REQUIRE(PerimeterCircle(1) == 6.28);
-    REQUIRE(PerimeterCircle(2.5) == 15.7);
+    REQUIRE(PerimeterCircle(3) == 18.84);
     REQUIRE(PerimeterCircle(5) == 31.4);
     REQUIRE(PerimeterCircle(10) == 62.8);
 }
