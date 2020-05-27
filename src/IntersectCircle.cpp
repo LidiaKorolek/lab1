@@ -1,6 +1,6 @@
 #include "IntersectCircle.h"
 
-void circle_intersects(
+bool circle_intersects(
         double x, double y, double r, double x1, double y1, double r1)
 {
     bool flag;
@@ -15,4 +15,5 @@ void circle_intersects(
     } else if (N <= (r + r1)) {
         flag = true;
     }
+    return flag;
 }
