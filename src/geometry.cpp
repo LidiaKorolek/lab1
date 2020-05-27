@@ -1,5 +1,6 @@
 #include "AreaCircle.h"
 #include "AreaTriangle.h"
+#include "IntersectCircle.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
 #include <iostream>
@@ -44,11 +45,22 @@ int main()
         cout << "Area: " << AreaCircle(cir1.r)
              << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
 
+        circle_intersects(cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
+        if (flag == true) {
+            cout << "intersects: 2. Circle" << endl;
+        } else
+            cout << "intersects: ---" << endl;
+
         cout << "\t\t2. ";
         cout << "Circle(" << cir2.x << " " << cir2.y << ", " << cir2.r << ")"
              << endl;
         cout << "Area: " << AreaCircle(cir2.r)
              << "\nPerimeter: " << PerimeterCircle(cir2.r) << endl;
+
+        if (flag == true) {
+            cout << "intersects: 1. Circle" << endl;
+        } else
+            cout << "intersects: ---" << endl;
     }
 
     if (f == 2 and f1 == 2) {
