@@ -1,6 +1,9 @@
 #ifndef LAB1_INTERSECTCIRCLE_H
 #define LAB1_INTERSECTCIRCLE_H
 
+#include <iostream>
+#include <math.h>
+
 bool circle_intersects(
         double x, double y, double r, double x1, double y1, double r1);
 
