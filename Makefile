@@ -24,7 +24,7 @@ build/src/AreaTriangle.o : src/AreaTriangle.cpp
 	g++ -Wall -Werror -c --std=c++17 src/AreaTriangle.cpp -o build/src/AreaTriangle.o
 
 build/src/IntersectCircle.o : src/IntersectCircle.cpp
-    g++ -Wall -Werror -c --std=c++17 src/IntersectCircle.cpp -o build/src/IntersectCircle.o
+    	g++ -Wall -Werror -c --std=c++17 src/IntersectCircle.cpp -o build/src/IntersectCircle.o
 	
 build/test/test.o : test/test.cpp
 	g++ -Wall -Werror -c -std=c++17 -I thirdparty/catch2 -I src test/test.cpp -o build/test/test.o
