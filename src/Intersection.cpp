@@ -1,6 +1,7 @@
 #include "Intersection.h"
 
-bool Intersection(struct Figure tri1, struct Figure tri2) {
+bool Intersection(struct Figure tri1, struct Figure tri2)
+{
     const double EPS = 1e-10;
     struct D_Point {
         double x;
@@ -43,8 +44,8 @@ bool Intersection(struct Figure tri1, struct Figure tri2) {
 
             double sumfo = 0;
             for (int k = 0; k < 3; ++k) {
-                double det
-                        = c[k % 3].x * c[(k + 1) % 3].y - c[(k + 1) % 3].x * c[k % 3].y;
+                double det = c[k % 3].x * c[(k + 1) % 3].y
+                        - c[(k + 1) % 3].x * c[k % 3].y;
                 sumfo += det;
             }
             sum += abs(sumfo / 2);
