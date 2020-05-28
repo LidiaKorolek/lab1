@@ -1,6 +1,7 @@
 #include "AreaCircle.h"
 #include "AreaTriangle.h"
 #include "IntersectCircle.h"
+#include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
 #include <iostream>
