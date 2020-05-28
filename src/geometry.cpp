@@ -10,6 +10,7 @@ using namespace std;
 
 int main()
 {
+Again:
     cout << "Choose two figures: 1.Circle 2.Triangle" << endl;
     int f, f1;
     cin >> f >> f1;
@@ -24,8 +25,7 @@ int main()
 
     if (f1 <= 0 || f <= 0 || f1 > 2 || f > 2) {
         cout << "Error input data" << endl;
-        cin.get();
-        cin.get();
+        goto Again;
         return 0;
     }
 
@@ -90,6 +90,12 @@ int main()
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
 
+        flag = Intersection(cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
+        if (flag) {
+            cout << "intersects: 2. Triangle" << endl;
+        } else
+            cout << "intersects: ---" << endl;
+
         cout << "\t\t2. ";
         cout << "Triangle(" << tri2.x << " " << tri2.y << ", " << tri2.x1 << " "
              << tri2.y1 << ", " << tri2.x2 << " " << tri2.y2 << ")" << endl;
@@ -99,6 +105,12 @@ int main()
              << PerimeterTriangle(
                         tri2.x, tri2.y, tri2.x1, tri2.y1, tri2.x2, tri2.y2)
              << endl;
+
+        flag = Intersection(cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
+        if (flag) {
+            cout << "intersects: 1. Triangle" << endl;
+        } else
+            cout << "intersects: ---" << endl;
     }
 
     if ((f == 1 and f1 == 2) or (f == 2 and f1 == 1)) {
