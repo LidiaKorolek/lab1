@@ -2,8 +2,8 @@
 
 all: bin/program bin/test
 
-bin/program: build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o
-	g++ -Wall -Werror --std=c++17 build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o -o bin/program
+bin/program: build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/Intersection.o
+	g++ -Wall -Werror --std=c++17 build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/Intersection -o bin/program
 	
 bin/test: build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o
 	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o -o bin/test
@@ -25,6 +25,9 @@ build/src/AreaTriangle.o : src/AreaTriangle.cpp
 
 build/src/IntersectCircle.o : src/IntersectCircle.cpp
 	g++ -Wall -Werror -c --std=c++17 src/IntersectCircle.cpp -o build/src/IntersectCircle.o
+
+build/src/Intersection.o : src/Intersection.cpp
+    g++ -Wall -Werror -c --std=c++17 src/Intersection.cpp -o build/src/Intersection.o
 	
 build/test/test.o : test/test.cpp
 	g++ -Wall -Werror -c --std=c++17 -I thirdparty/catch2 -I src test/test.cpp -o build/test/test.o
