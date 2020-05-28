@@ -3,7 +3,7 @@
 bool IntersectCircle(
         double x, double y, double r, double x1, double y1, double r1)
 {
-    bool flag;
+    bool flag = false;
     double N;
     N = sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
     if (x == x1 && y == y1 && r == r1) {
