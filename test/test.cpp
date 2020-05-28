@@ -2,6 +2,7 @@
 #include "AreaTriangle.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+#include "IntersectCircle.h"
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
