@@ -1,8 +1,8 @@
 #ifndef LAB1_INTERSECTION_H
 #define LAB1_INTERSECTION_H
 
-#include <iostream>
 #include "Figure.h"
+#include <iostream>
 
 using namespace std;
 

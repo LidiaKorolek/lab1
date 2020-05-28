@@ -1,10 +1,10 @@
 #include "AreaCircle.h"
 #include "AreaTriangle.h"
+#include "Figure.h"
 #include "IntersectCircle.h"
 #include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
-#include "Figure.h"
 #include <iostream>
 #include <math.h>
 
