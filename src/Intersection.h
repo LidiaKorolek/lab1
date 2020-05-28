@@ -1,9 +1,9 @@
 #ifndef LAB1_INTERSECTION_H
 #define LAB1_INTERSECTION_H
 
+#include <cmath>
 #include "Figure.h"
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 

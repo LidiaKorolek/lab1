@@ -5,8 +5,8 @@
 #include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
