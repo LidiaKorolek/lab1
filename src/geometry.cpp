@@ -90,8 +90,7 @@ Again:
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
 
-        bool flag
-                = Intersection(tri1, tri2);
+        bool flag = Intersection(tri1, tri2);
         if (flag) {
             cout << "intersects: 2. Triangle" << endl;
         } else
