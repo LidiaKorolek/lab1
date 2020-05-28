@@ -1,6 +1,6 @@
 #include "IntersectCircle.h"
 
-bool circle_intersects(
+bool IntersectCircle(
         double x, double y, double r, double x1, double y1, double r1)
 {
     bool flag;

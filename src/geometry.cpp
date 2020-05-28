@@ -45,7 +45,7 @@ int main()
         cout << "Area: " << AreaCircle(cir1.r)
              << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
 
-        bool flag = circle_intersects(
+        bool flag = IntersectCircle(
                 cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
         if (flag) {
             cout << "intersects: 2. Circle" << endl;
