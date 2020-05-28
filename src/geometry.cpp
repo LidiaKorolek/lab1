@@ -91,7 +91,7 @@ Again:
              << endl;
 
         bool flag
-                = Intersection(cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
+                = Intersection(tri1, tri2);
         if (flag) {
             cout << "intersects: 2. Triangle" << endl;
         } else
@@ -107,7 +107,6 @@ Again:
                         tri2.x, tri2.y, tri2.x1, tri2.y1, tri2.x2, tri2.y2)
              << endl;
 
-        flag = Intersection(cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
         if (flag) {
             cout << "intersects: 1. Triangle" << endl;
         } else
