@@ -6,7 +6,7 @@
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
 #include <iostream>
-#include <math.h>
+#include <cmath>
 
 using namespace std;
 
