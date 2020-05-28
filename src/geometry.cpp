@@ -4,6 +4,7 @@
 #include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+#include "Figure.h"
 #include <iostream>
 #include <math.h>
 
@@ -15,9 +16,6 @@ Again:
     cout << "Choose two figures: 1.Circle 2.Triangle" << endl;
     int f, f1;
     cin >> f >> f1;
-    struct Figure {
-        double x, y, x1, y1, x2, y2, r;
-    };
 
     Figure cir1;
     Figure tri1;

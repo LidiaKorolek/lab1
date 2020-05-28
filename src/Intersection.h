@@ -2,6 +2,7 @@
 #define LAB1_INTERSECTION_H
 
 #include <iostream>
+#include "Figure.h"
 
 using namespace std;
 
