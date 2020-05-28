@@ -2,6 +2,7 @@
 #include "AreaTriangle.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+#include "IntersectCircle.h"
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
@@ -36,4 +37,12 @@ TEST_CASE("Triangle perimeter", "[PerimeterTriangle]")
     REQUIRE(PerimeterTriangle(0, 0, 3, 0, 0, 4) == 12);
     REQUIRE(PerimeterTriangle(2, 2, 8, 2, 2, 10) == 24);
     REQUIRE(PerimeterTriangle(3, 3, 6, 3, 3, 7) == 12);
+}
+
+TEST_CASE("Circle intersect", "[IntersectCircle]")
+{
+    REQUIRE(IntersectCircle(0, 0, 5, 100, 100, 5) == false);
+    REQUIRE(IntersectCircle(0, 0, 3, 0, 0, 4) == false);
+    REQUIRE(IntersectCircle(3, 3, 3, 0, 0, 2) == true);
+    REQUIRE(IntersectCircle(0, 0, 7, 7, 0, 4) == true);
 }
