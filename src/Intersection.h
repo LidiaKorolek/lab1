@@ -5,6 +5,6 @@
 
 using namespace std;
 
-bool Intersection(struct Figure tri1, struct Figure tri2);
+bool Intersection(Figure tri1, Figure tri2);
 
 #endif // LAB1_INTERSECTION_H

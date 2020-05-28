@@ -1,6 +1,6 @@
 #include "Intersection.h"
 
-bool Intersection(struct Figure tri1, struct Figure tri2)
+bool Intersection(Figure tri1, Figure tri2)
 {
     const double EPS = 1e-10;
     struct D_Point {
