@@ -30,10 +30,10 @@ build/src/Intersection.o : src/Intersection.cpp
 	g++ -Wall -Werror -c --std=c++17 src/Intersection.cpp -o build/src/Intersection.o
 
 build/src/TriangleAndCircleInf.o : src/TriangleAndCircleInf.cpp
-    g++ -Wall -Werror -c --std=c++17 src/TriangleAndCircleInf.cpp -o build/src/TriangleAndCircleInf.o
+	g++ -Wall -Werror -c --std=c++17 src/TriangleAndCircleInf.cpp -o build/src/TriangleAndCircleInf.o
 
 build/src/SegmentCheck.o : src/SegmentCheck.cpp
-    g++ -Wall -Werror -c --std=c++17 src/SegmentCheck.cpp -o build/src/SegmentCheck.o
+	g++ -Wall -Werror -c --std=c++17 src/SegmentCheck.cpp -o build/src/SegmentCheck.o
 	
 build/test/test.o : test/test.cpp
 	g++ -Wall -Werror -c --std=c++17 -I thirdparty/catch2 -I src test/test.cpp -o build/test/test.o
