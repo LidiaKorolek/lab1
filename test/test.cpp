@@ -76,7 +76,7 @@ TEST_CASE("Intersection", "[Intersection]")
     //REQUIRE(Intersection(tri1, tri2) == true);
     tri2.x = 7;
     tri2.y = 7;
-    REQUIRE(Intersection(tri1, tri2) == true);
+    //REQUIRE(Intersection(tri1, tri2) == true);
     tri1.x2 = 4;
     tri1.y2 = 5;
     REQUIRE(Intersection(tri1, tri2) == false);
