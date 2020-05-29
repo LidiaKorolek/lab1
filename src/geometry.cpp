@@ -5,6 +5,7 @@
 #include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+#include "TriangleAndCircleInf"
 #include <cmath>
 #include <iostream>
 
@@ -47,9 +48,9 @@ Again:
         bool flag = IntersectCircle(
                 cir1.x, cir1.y, cir1.r, cir2.x, cir2.y, cir2.r);
         if (flag) {
-            cout << "intersects: 2. Circle" << endl;
+            cout << "Intersects: 2. Circle" << endl;
         } else
-            cout << "intersects: ---" << endl;
+            cout << "Intersects: ---" << endl;
 
         cout << "\t\t2. ";
         cout << "Circle(" << cir2.x << " " << cir2.y << ", " << cir2.r << ")"
@@ -58,9 +59,9 @@ Again:
              << "\nPerimeter: " << PerimeterCircle(cir2.r) << endl;
 
         if (flag) {
-            cout << "intersects: 1. Circle" << endl;
+            cout << "Intersects: 1. Circle" << endl;
         } else
-            cout << "intersects: ---" << endl;
+            cout << "Intersects: ---" << endl;
     }
 
     if (f == 2 and f1 == 2) {
@@ -91,9 +92,9 @@ Again:
 
         bool flag = Intersection(tri1, tri2);
         if (flag) {
-            cout << "intersects: 2. Triangle" << endl;
+            cout << "Intersects: 2. Triangle" << endl;
         } else
-            cout << "intersects: ---" << endl;
+            cout << "Intersects: ---" << endl;
 
         cout << "\t\t2. ";
         cout << "Triangle(" << tri2.x << " " << tri2.y << ", " << tri2.x1 << " "
@@ -106,9 +107,9 @@ Again:
              << endl;
 
         if (flag) {
-            cout << "intersects: 1. Triangle" << endl;
+            cout << "Intersects: 1. Triangle" << endl;
         } else
-            cout << "intersects: ---" << endl;
+            cout << "Intersects: ---" << endl;
     }
 
     if ((f == 1 and f1 == 2) or (f == 2 and f1 == 1)) {
@@ -129,6 +130,13 @@ Again:
         cout << "Area: " << AreaCircle(cir1.r)
              << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
 
+        bool flag = TriangleAndCircleInf(tri1, cir1);
+        bool flag = Intersection(tri1, tri2);
+        if (flag) {
+            cout << "Intersects: 2. Triangle" << endl;
+        } else
+            cout << "Intersects: ---" << endl;
+
         cout << "\t\t2. Triangle(" << tri1.x << " " << tri1.y << ", " << tri1.x1
              << " " << tri1.y1 << ", " << tri1.x2 << " " << tri1.y2 << ")"
              << endl;
@@ -138,6 +146,12 @@ Again:
              << PerimeterTriangle(
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
+
+        bool flag = Intersection(tri1, tri2);
+        if (flag) {
+            cout << "Intersects: 1. Circle" << endl;
+        } else
+            cout << "Intersects: ---" << endl;
     }
     cin.get();
     cin.get();
