@@ -3,6 +3,7 @@
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
 #include "IntersectCircle.h"
+#include "SegmentCheck.h"
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
