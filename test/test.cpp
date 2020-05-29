@@ -46,3 +46,11 @@ TEST_CASE("Circle intersect", "[IntersectCircle]")
     REQUIRE(IntersectCircle(3, 3, 3, 0, 0, 2) == true);
     REQUIRE(IntersectCircle(0, 0, 7, 7, 0, 4) == true);
 }
+
+TEST_CASE("Check segment", "[SegmentCheck]")
+{
+    REQUIRE(SegmentCheck(0, 5, 3, 4, 5, 4, 3) == true);
+    REQUIRE(SegmentCheck(2, 2, 2, 7, 0, 0, 4) == true);
+    REQUIRE(SegmentCheck(7, 2, 2, 7, 0, 0, 4) == false);
+    REQUIRE(SegmentCheck(0, 5, 1, 0, 5, 4, 3) == false);
+}
