@@ -1,12 +1,12 @@
-#ifndef LAB1_SEGMENTСHECK_H
-#define LAB1_SEGMENTСHECK_H
+#ifndef LAB1_SEGMENTCHECK_H
+#define LAB1_SEGMENTCHECK_H
 
 #include <cmath>
 #include <iostream>
 
 using namespace std;
 
-bool commonSectionCircle(
+bool SegmentCheck(
         double x1,
         double y1,
         double x2,

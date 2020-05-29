@@ -1,6 +1,6 @@
-#include "SegmentСheck.h"
+#include "SegmentCheck.h"
 
-bool commonSectionCircle(
+bool SegmentCheck(
         double x1,
         double y1,
         double x2,
