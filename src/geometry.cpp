@@ -5,6 +5,7 @@
 #include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
+#include "TriangleAndCircleInf"
 #include <cmath>
 #include <iostream>
 
