@@ -5,7 +5,7 @@
 #include "Intersection.h"
 #include "PerimeterCircle.h"
 #include "PerimeterTriangle.h"
-#include "TriangleAndCircleInf"
+#include "TriangleAndCircleInf.h"
 #include <cmath>
 #include <iostream>
 
@@ -145,7 +145,7 @@ Again:
              << PerimeterTriangle(
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
-        
+
         if (flag) {
             cout << "Intersects: 1. Circle" << endl;
         } else
