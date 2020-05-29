@@ -5,8 +5,8 @@ all: bin/program bin/test
 bin/program: build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/Intersection.o build/src/SegmentCheck.o build/src/TriangleAndCircleInf.o
 	g++ -Wall -Werror --std=c++17 build/src/geometry.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/Intersection.o build/src/SegmentCheck.o build/src/TriangleAndCircleInf.o -o bin/program
 	
-bin/test: build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/SegmentCheck.o build/src/IntersectCircle.o
-	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/SegmentCheck.o build/src/IntersectCircle.o -o bin/test
+bin/test: build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/SegmentCheck.o build/src/Intersection.o
+	g++ -Wall -Werror -std=c++17 -I thirdparty/catch2 build/test/test.o build/src/PerimeterCircle.o build/src/PerimeterTriangle.o build/src/AreaCircle.o build/src/AreaTriangle.o build/src/IntersectCircle.o build/src/SegmentCheck.o build/src/Intersection.o -o bin/test
 	
 build/src/geometry.o : src/geometry.cpp
 	g++ -Wall -Werror -c --std=c++17 src/geometry.cpp -o build/src/geometry.o
