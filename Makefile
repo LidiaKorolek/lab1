@@ -36,7 +36,7 @@ build/src/SegmentCheck.o : src/SegmentCheck.cpp
 	g++ -Wall -Werror -c --std=c++17 src/SegmentCheck.cpp -o build/src/SegmentCheck.o
 
 build/src/CircleCheck.o : src/CircleCheck.cpp
-	g++ -Wall - Werror -c --std=c++17 src/CircleCheck.cpp -o build/src/CircleCheck.o
+	g++ -Wall -Werror -c --std=c++17 src/CircleCheck.cpp -o build/src/CircleCheck.o
 	
 build/test/test.o : test/test.cpp
 	g++ -Wall -Werror -c --std=c++17 -I thirdparty/catch2 -I src test/test.cpp -o build/test/test.o
