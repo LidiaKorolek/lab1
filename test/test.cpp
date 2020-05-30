@@ -75,6 +75,11 @@ TEST_CASE("Triangle And Circle Inf", "[TriangleAndCircleInf]")
     tri1.x2 = 1;
     tri1.y2 = 6;
     REQUIRE(TriangleAndCircleInf(tri1, cir1) == false);
+    tri1.x = 3;
+    tri1.y = 3;
+    REQUIRE(TriangleAndCircleInf(tri1, cir1) == true);
+    cir1.r = 2;
+    REQUIRE(TriangleAndCircleInf(tri1, cir1) == false);
 }
 
 TEST_CASE("Intersection", "[Intersection]")
