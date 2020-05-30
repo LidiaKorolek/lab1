@@ -1,5 +1,6 @@
 #include "AreaCircle.h"
 #include "AreaTriangle.h"
+#include "CircleCheck"
 #include "Figure.h"
 #include "IntersectCircle.h"
 #include "Intersection.h"
@@ -39,6 +40,9 @@ Again:
         cin >> cir2.x;
         cin >> cir2.y;
         cin >> cir2.r;
+
+        CircleCheck(cir1.r);
+        CircleCheck(cir2.r);
 
         cout << "\t\t1. ";
         cout << "Circle(" << cir1.x << " " << cir1.y << ", " << cir1.r << ")"
@@ -126,13 +130,17 @@ Again:
         cin >> tri1.x2;
         cin >> tri1.y2;
 
+        if (!CircleCheck(cir1.r)) {
+            cin.get();
+            cin.get();
+        }
+
         cout << "\t\t1. Circle(" << cir1.x << " " << cir1.y << ", " << cir1.r
              << ")" << endl;
         cout << "Area: " << AreaCircle(cir1.r)
              << "\nPerimeter: " << PerimeterCircle(cir1.r) << endl;
 
-        bool flag = TriangleAndCircleInf(tri1, cir1);
-        if (flag) {
+        if (TriangleAndCircleInf(tri1, cir1)) {
             cout << "Intersects: 2. Triangle" << endl;
         } else
             cout << "Intersects: ---" << endl;
@@ -147,7 +155,7 @@ Again:
                         tri1.x, tri1.y, tri1.x1, tri1.y1, tri1.x2, tri1.y2)
              << endl;
 
-        if (flag) {
+        if (TriangleAndCircleInf(tri1, cir1)) {
             cout << "Intersects: 1. Circle" << endl;
         } else
             cout << "Intersects: ---" << endl;
