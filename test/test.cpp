@@ -6,6 +6,7 @@
 #include "SegmentCheck.h"
 #include "Intersection.h"
 #include "Figure.h"
+#include "TriangleAndCircleInf.h"
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
@@ -56,6 +57,24 @@ TEST_CASE("Check segment", "[SegmentCheck]")
     REQUIRE(SegmentCheck(2, 2, 2, 7, 0, 0, 4) == true);
     REQUIRE(SegmentCheck(7, 2, 2, 7, 0, 0, 4) == false);
     REQUIRE(SegmentCheck(0, 5, 1, 0, 5, 4, 3) == false);
+}
+
+TEST_CASE("Triangle And Circle Inf", "[TriangleAndCircleInf]")
+{
+    Figure tri1, cir1;
+    tri1.x = 1;
+    tri1.y = 0;
+    tri1.x1 = 0;
+    tri1.y1 = 5;
+    tri1.x2 = 3;
+    tri1.y2 = 4;
+    cir1.x = 5;
+    cir1.y = 4;
+    cir1.r = 3;
+    REQUIRE(TriangleAndCircleInf(tri1, cir1) == true);
+    tri1.x2 = 1;
+    tri1.y2 = 6;
+    REQUIRE(TriangleAndCircleInf(tri1, cir1) == false);
 }
 
 TEST_CASE("Intersection", "[Intersection]")
