@@ -7,6 +7,7 @@
 #include "Intersection.h"
 #include "Figure.h"
 #include "TriangleAndCircleInf.h"
+#include "CircleCheck.h"
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
