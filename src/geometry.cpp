@@ -1,6 +1,6 @@
 #include "AreaCircle.h"
 #include "AreaTriangle.h"
-#include "CircleCheck"
+#include "CircleCheck.h"
 #include "Figure.h"
 #include "IntersectCircle.h"
 #include "Intersection.h"
