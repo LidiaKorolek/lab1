@@ -58,28 +58,21 @@ TEST_CASE("Check segment", "[SegmentCheck]")
     REQUIRE(SegmentCheck(0, 5, 1, 0, 5, 4, 3) == false);
 }
 
+TEST_CASE("Intersection", "[Intersection]")
+{
     Figure tri1, tri2;
     tri1.x = 2;
     tri1.y = 8;
     tri1.x1 = 5;
     tri1.y1 = 10;
-    tri1.x2 = 6;
-    tri1.y2 = 4;
-    tri2.x = 6;
-    tri2.y = 6;
+    tri1.x2 = 4;
+    tri1.y2 = 5;
+    tri2.x = 7;
+    tri2.y = 7;
     tri2.x1 = 4;
     tri2.y1 = 3;
     tri2.x2 = 7;
     tri2.y2 = 2;
-
-TEST_CASE("Intersection", "[Intersection]")
-{
-    //REQUIRE(Intersection(tri1, tri2) == true);
-    tri2.x = 7;
-    tri2.y = 7;
-    //REQUIRE(Intersection(tri1, tri2) == true);
-    tri1.x2 = 4;
-    tri1.y2 = 5;
     REQUIRE(Intersection(tri1, tri2) == false);
     tri1.x = 3;
     tri1.y = 8;
