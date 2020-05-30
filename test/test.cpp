@@ -58,8 +58,6 @@ TEST_CASE("Check segment", "[SegmentCheck]")
     REQUIRE(SegmentCheck(0, 5, 1, 0, 5, 4, 3) == false);
 }
 
-TEST_CASE("Intersection", "[Intersection]")
-{
     Figure tri1, tri2;
     tri1.x = 2;
     tri1.y = 8;
@@ -73,6 +71,9 @@ TEST_CASE("Intersection", "[Intersection]")
     tri2.y1 = 3;
     tri2.x2 = 7;
     tri2.y2 = 2;
+
+TEST_CASE("Intersection", "[Intersection]")
+{
     //REQUIRE(Intersection(tri1, tri2) == true);
     tri2.x = 7;
     tri2.y = 7;
