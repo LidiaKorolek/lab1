@@ -39,7 +39,7 @@ build/src/CircleCheck.o : src/CircleCheck.cpp
 	g++ -Wall -Werror -c --std=c++17 src/CircleCheck.cpp -o build/src/CircleCheck.o
 
 build/src/TriangleCheck.o : src/TriangleCheck.cpp
-    g++ -Wall -Werror -c --std=c++17 src/TriangleCheck.cpp -o build/src/TriangleCheck.o
+	g++ -Wall -Werror -c --std=c++17 src/TriangleCheck.cpp -o build/src/TriangleCheck.o
 	
 build/test/test.o : test/test.cpp
 	g++ -Wall -Werror -c --std=c++17 -I thirdparty/catch2 -I src test/test.cpp -o build/test/test.o
