@@ -42,6 +42,7 @@ Again:
         cin >> cir2.r;
 
         if (!CircleCheck(cir1.r) || !CircleCheck(cir2.r)) {
+            cout << "Error input data" << endl;
             cin.get();
             cin.get();
         }
@@ -133,6 +134,7 @@ Again:
         cin >> tri1.y2;
 
         if (!CircleCheck(cir1.r)) {
+            cout << "Error input data" << endl;
             cin.get();
             cin.get();
         }
