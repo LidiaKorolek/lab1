@@ -8,6 +8,7 @@
 #include "PerimeterTriangle.h"
 #include "SegmentCheck.h"
 #include "TriangleAndCircleInf.h"
+#include "TriangleCheck.h"
 #include <cmath>
 #include <iostream>
 
@@ -88,6 +89,12 @@ Again:
         cin >> tri2.x2;
         cin >> tri2.y2;
 
+        if (!TriangleCheck(tri1) || !TriangleCheck(tri2)) {
+            cout << "Error input data" << endl;
+            cin.get();
+            cin.get();
+        }
+
         cout << "\t\t1. ";
         cout << "Triangle(" << tri1.x << " " << tri1.y << ", " << tri1.x1 << " "
              << tri1.y1 << ", " << tri1.x2 << " " << tri1.y2 << ")" << endl;
@@ -133,7 +140,7 @@ Again:
         cin >> tri1.x2;
         cin >> tri1.y2;
 
-        if (!CircleCheck(cir1.r)) {
+        if (!CircleCheck(cir1.r) || !TriangleCheck(tri1)) {
             cout << "Error input data" << endl;
             cin.get();
             cin.get();
