@@ -108,3 +108,11 @@ TEST_CASE("Intersection", "[Intersection]")
     tri1.y1 = 11;
     REQUIRE(Intersection(tri1, tri2) == false);
 }
+
+TEST_CASE("Circle check", "[CircleCheck]")
+{
+    REQUIRE(CircleCheck(1) == true);
+    REQUIRE(CircleCheck(5) == true);
+    REQUIRE(CircleCheck(0) == false);
+    REQUIRE(CircleCheck(-1) == false);
+}
