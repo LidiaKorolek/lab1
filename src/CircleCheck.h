@@ -3,6 +3,6 @@
 
 using namespace std;
 
-CircleCheck(double R);
+bool CircleCheck(double R);
 
 #endif // LAB1_CIRCLECHECK_H

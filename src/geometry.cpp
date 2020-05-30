@@ -41,8 +41,10 @@ Again:
         cin >> cir2.y;
         cin >> cir2.r;
 
-        CircleCheck(cir1.r);
-        CircleCheck(cir2.r);
+        if (!CircleCheck(cir1.r) || !CircleCheck(cir2.r)) {
+            cin.get();
+            cin.get();
+        }
 
         cout << "\t\t1. ";
         cout << "Circle(" << cir1.x << " " << cir1.y << ", " << cir1.r << ")"
