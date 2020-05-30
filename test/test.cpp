@@ -8,6 +8,7 @@
 #include "Figure.h"
 #include "TriangleAndCircleInf.h"
 #include "CircleCheck.h"
+#include "TriangleCheck.h"
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
@@ -116,4 +117,27 @@ TEST_CASE("Circle check", "[CircleCheck]")
     REQUIRE(CircleCheck(5) == true);
     REQUIRE(CircleCheck(0) == false);
     REQUIRE(CircleCheck(-1) == false);
+}
+
+TEST_CASE("Triangle Check", "[TriangleCheck]")
+{
+    Figure tr;
+    tr.x = 1;
+    tr.y = 5;
+    tr.x1 = 3;
+    tr.y1 = 3;
+    tr.x2 = 5;
+    tr.y2 = 1;
+    REQUIRE(TriangleCheck(tr) == false);
+    tr.y2 = 3;
+    REQUIRE(TriangleCheck(tr) == true);
+    tr.x = 1;
+    tr.y = 4;
+    tr.x1 = 3;
+    tr.y1 = 4;
+    tr.x2 = 7;
+    tr.y2 = 4;
+    REQUIRE(TriangleCheck(tr) == false);
+    tr.y2 = 0;
+    REQUIRE(TriangleCheck(tr) == true);
 }
